@@ -14,6 +14,6 @@
         </Grid.ColumnDefinitions>
         <TextBox x:Name="tbHotkey" TabIndex="100" VerticalContentAlignment="Center" Grid.Column="0"
                  PreviewKeyDown="TbHotkey_OnPreviewKeyDown" input:InputMethod.IsInputMethodEnabled="False"/>
-        <TextBlock x:Name="tbMsg" Visibility="Hidden" Margin="5 0 0 0" VerticalAlignment="Center" Grid.Column="1" />
+        <TextBlock RenderOptions.ClearTypeHint="Enabled" x:Name="tbMsg" Visibility="Hidden" Margin="5 0 0 0" VerticalAlignment="Center" Grid.Column="1" />
     </Grid>
 </UserControl>

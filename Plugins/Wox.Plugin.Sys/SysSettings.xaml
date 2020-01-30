@@ -12,14 +12,14 @@
 					<GridViewColumn Header="{DynamicResource wox_plugin_sys_command}"  Width="150">
 						<GridViewColumn.CellTemplate>
 							<DataTemplate>
-								<TextBlock Text="{Binding Title}"/>
+								<TextBlock RenderOptions.ClearTypeHint="Enabled" Text="{Binding Title}"/>
 							</DataTemplate>
 						</GridViewColumn.CellTemplate>
 					</GridViewColumn>
                     <GridViewColumn Header="{DynamicResource wox_plugin_sys_desc}"  Width="Auto">
 						<GridViewColumn.CellTemplate>
 							<DataTemplate>
-								<TextBlock Text="{Binding SubTitle}"/>
+								<TextBlock RenderOptions.ClearTypeHint="Enabled" Text="{Binding SubTitle}"/>
 							</DataTemplate>
 						</GridViewColumn.CellTemplate>
 					</GridViewColumn>
