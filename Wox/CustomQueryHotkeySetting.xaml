@@ -5,7 +5,8 @@
         Icon="Images\app.png"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        Title="Custom Plugin Hotkey" Height="200" Width="674.766">
+        Title="Custom Plugin Hotkey" Height="200" Width="674.766"
+        RenderOptions.ClearTypeHint="Enabled">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

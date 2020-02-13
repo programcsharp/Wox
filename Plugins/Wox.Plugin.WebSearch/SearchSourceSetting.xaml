@@ -8,6 +8,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Title="Search Source Setting" Height="300" Width="500"
+        RenderOptions.ClearTypeHint="Enabled"
         d:DataContext="{d:DesignInstance vm:SearchSourceViewModel}">
     <Grid>
         <Grid.RowDefinitions>

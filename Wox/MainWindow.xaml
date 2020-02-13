@@ -14,6 +14,7 @@
         AllowDrop="True"
         ShowInTaskbar="False"
         Style="{DynamicResource WindowStyle}"
+        RenderOptions.ClearTypeHint="Enabled"
         Icon="Images\app.png"
         AllowsTransparency="True"
         Loaded="OnLoaded"

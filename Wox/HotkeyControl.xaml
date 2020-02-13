@@ -6,7 +6,8 @@
              xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
              mc:Ignorable="d"
              Height="24"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             RenderOptions.ClearTypeHint="Enabled">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />

@@ -6,6 +6,7 @@
              mc:Ignorable="d" 
              Width="400"
              Height="120"
+             RenderOptions.ClearTypeHint="Enabled"
              WindowStartupLocation="CenterScreen">
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal">

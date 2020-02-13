@@ -6,7 +6,8 @@
         ResizeMode="NoResize"
         Loaded="ActionKeyword_OnLoaded"
         WindowStartupLocation="CenterScreen"
-        Height="200" Width="600">
+        Height="200" Width="600"
+        RenderOptions.ClearTypeHint="Enabled">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

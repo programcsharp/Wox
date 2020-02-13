@@ -18,7 +18,8 @@
          VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Standard"
          SelectionChanged="OnSelectionChanged"
          IsSynchronizedWithCurrentItem="True"
-         PreviewMouseDown="ListBox_PreviewMouseDown">
+         PreviewMouseDown="ListBox_PreviewMouseDown"
+         RenderOptions.ClearTypeHint="Enabled">
     <!--IsSynchronizedWithCurrentItem: http://stackoverflow.com/a/7833798/2833083-->
     <ListBox.ItemTemplate>
         <DataTemplate>

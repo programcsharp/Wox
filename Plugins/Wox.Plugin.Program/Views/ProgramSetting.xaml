@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:program="clr-namespace:Wox.Plugin.Program"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="600">
+             d:DesignHeight="300" d:DesignWidth="600"
+             RenderOptions.ClearTypeHint="Enabled">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>

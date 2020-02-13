@@ -15,7 +15,8 @@
         WindowStartupLocation="CenterScreen"
         Height="600" Width="800" 
         Closed="OnClosed"
-        d:DataContext="{d:DesignInstance vm:SettingWindowViewModel}">
+        d:DataContext="{d:DesignInstance vm:SettingWindowViewModel}"
+        RenderOptions.ClearTypeHint="Enabled">
     <Window.InputBindings>
         <KeyBinding Key="Escape" Command="Close"/>
     </Window.InputBindings>

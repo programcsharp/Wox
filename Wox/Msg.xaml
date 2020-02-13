@@ -7,7 +7,8 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         ShowInTaskbar="False"
-        Title="Msg" Height="60" Width="420">
+        Title="Msg" Height="60" Width="420"
+        RenderOptions.ClearTypeHint="Enabled">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>

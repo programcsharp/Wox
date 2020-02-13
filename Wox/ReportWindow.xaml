@@ -11,7 +11,8 @@
              Width="600"
              Height="455"
              Title="{DynamicResource reportWindow_wox_got_an_error}"
-             d:DesignHeight="300" d:DesignWidth="600" x:ClassModifier="internal">
+             d:DesignHeight="300" d:DesignWidth="600" x:ClassModifier="internal"
+             RenderOptions.ClearTypeHint="Enabled">
     <RichTextBox RenderOptions.ClearTypeHint="Enabled"
                  x:Name="ErrorTextbox" 
                  IsDocumentEnabled="True"
