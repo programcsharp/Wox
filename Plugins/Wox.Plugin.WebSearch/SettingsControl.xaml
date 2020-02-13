@@ -30,7 +30,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="0,3,0,17" Width="480">
             <Label Content="Set browser from path:" Height="28" Margin="0,0,350,0" HorizontalAlignment="Left" Width="130"/>
-            <TextBox x:Name="browserPathBox" HorizontalAlignment="Left" Height="21" Margin="138,-25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" RenderTransformOrigin="0.502,-1.668"/>
+            <TextBox RenderOptions.ClearTypeHint="Enabled" x:Name="browserPathBox" HorizontalAlignment="Left" Height="21" Margin="138,-25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" RenderTransformOrigin="0.502,-1.668"/>
             <Button x:Name="viewButton" HorizontalAlignment="Left" Margin="381,-30,0,0" Width="58" Height="25" Click="OnChooseClick" FontSize="10" Content="Choose" />
         </StackPanel>
         <ListView ItemsSource="{Binding Settings.SearchSources}"

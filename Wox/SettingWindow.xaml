@@ -83,7 +83,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock RenderOptions.ClearTypeHint="Enabled" Margin="10" Text="{DynamicResource pythonDirectory}" />
-                    <TextBox Width="300" Margin="10" Text="{Binding Settings.PluginSettings.PythonDirectory}" />
+                    <TextBox RenderOptions.ClearTypeHint="Enabled" Width="300" Margin="10" Text="{Binding Settings.PluginSettings.PythonDirectory}" />
                     <Button Margin="10" Click="OnSelectPythonDirectoryClick"
                             Content="{DynamicResource selectPythonDirectory}" />
                 </StackPanel>
@@ -221,7 +221,8 @@
                                         <RowDefinition Height="50" />
                                         <RowDefinition />
                                     </Grid.RowDefinitions>
-                                    <TextBox Text="{DynamicResource helloWox}" IsReadOnly="True"
+                                    <TextBox RenderOptions.ClearTypeHint="Enabled"
+                                             Text="{DynamicResource helloWox}" IsReadOnly="True"
                                              Style="{DynamicResource QueryBoxStyle}" Grid.Row="0" />
                                     <ContentControl Visibility="Visible" Grid.Row="1">
                                         <wox:ResultListBox DataContext="{Binding PreviewResults}" />
@@ -347,13 +348,13 @@
                         <ColumnDefinition Width="200" />
                     </Grid.ColumnDefinitions>
                     <TextBlock RenderOptions.ClearTypeHint="Enabled" Text="{DynamicResource server}" Grid.Row="0" Grid.Column="0" Padding="5" />
-                    <TextBox Text="{Binding Settings.Proxy.Server}" Grid.Row="0" Grid.Column="1" Padding="5" />
+                    <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding Settings.Proxy.Server}" Grid.Row="0" Grid.Column="1" Padding="5" />
                     <TextBlock RenderOptions.ClearTypeHint="Enabled" Text="{DynamicResource port}" Grid.Row="0" Grid.Column="2" Padding="5" />
-                    <TextBox Text="{Binding Settings.Proxy.Port, TargetNullValue={x:Static sys:String.Empty} }" Grid.Row="0" Grid.Column="3" Padding="5" />
+                    <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding Settings.Proxy.Port, TargetNullValue={x:Static sys:String.Empty} }" Grid.Row="0" Grid.Column="3" Padding="5" />
                     <TextBlock RenderOptions.ClearTypeHint="Enabled" Text="{DynamicResource userName}" Grid.Row="1" Grid.Column="0" Padding="5" />
-                    <TextBox Text="{Binding Settings.Proxy.UserName}" Grid.Row="1" Grid.Column="1" Padding="5" />
+                    <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding Settings.Proxy.UserName}" Grid.Row="1" Grid.Column="1" Padding="5" />
                     <TextBlock RenderOptions.ClearTypeHint="Enabled" Text="{DynamicResource password}" Grid.Row="1" Grid.Column="2" Padding="5" />
-                    <TextBox Text="{Binding Settings.Proxy.Password}" Grid.Row="1" Grid.Column="3" Padding="5" />
+                    <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding Settings.Proxy.Password}" Grid.Row="1" Grid.Column="3" Padding="5" />
                 </Grid>
                 <Button Content="{DynamicResource testProxy}" IsEnabled="{Binding Settings.Proxy.Enabled}"
                         Width="80" HorizontalAlignment="Left" Margin="10" Click="OnTestProxyClick" />

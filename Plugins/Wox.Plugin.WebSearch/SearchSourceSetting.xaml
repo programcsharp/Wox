@@ -24,19 +24,19 @@
         </Grid.ColumnDefinitions>
         <TextBlock RenderOptions.ClearTypeHint="Enabled" Margin="10" FontSize="14" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"
                    HorizontalAlignment="Right" Text="{DynamicResource wox_plugin_websearch_title}" />
-        <TextBox Text="{Binding SearchSource.Title}" Margin="10" Grid.Row="0" Width="300" Grid.Column="1"
+        <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding SearchSource.Title}" Margin="10" Grid.Row="0" Width="300" Grid.Column="1"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Left" />
 
         <TextBlock RenderOptions.ClearTypeHint="Enabled" Margin="10" FontSize="14" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
                    HorizontalAlignment="Right" Text="{DynamicResource wox_plugin_websearch_url}" />
-        <TextBox Text="{Binding SearchSource.Url}" Margin="10" Grid.Row="1" Width="300" Grid.Column="1"
+        <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding SearchSource.Url}" Margin="10" Grid.Row="1" Width="300" Grid.Column="1"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Left" />
 
         <TextBlock RenderOptions.ClearTypeHint="Enabled" Margin="10" FontSize="14" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"
                    HorizontalAlignment="Right" Text="{DynamicResource wox_plugin_websearch_action_keyword}" />
-        <TextBox Text="{Binding SearchSource.ActionKeyword}" Margin="10" Grid.Row="2" Width="300" Grid.Column="1"
+        <TextBox RenderOptions.ClearTypeHint="Enabled" Text="{Binding SearchSource.ActionKeyword}" Margin="10" Grid.Row="2" Width="300" Grid.Column="1"
                  VerticalAlignment="Center" HorizontalAlignment="Left" />
 
         <TextBlock RenderOptions.ClearTypeHint="Enabled" Margin="10" FontSize="14" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"

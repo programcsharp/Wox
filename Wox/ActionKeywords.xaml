@@ -28,7 +28,7 @@
         <TextBlock RenderOptions.ClearTypeHint="Enabled" Margin="10" FontSize="14" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
                    HorizontalAlignment="Right" Text="{DynamicResource newActionKeyword}" />
         <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="1">
-            <TextBox x:Name="tbAction" Margin="10" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left" />
+            <TextBox RenderOptions.ClearTypeHint="Enabled" x:Name="tbAction" Margin="10" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left"/>
         </StackPanel>
 
         <TextBlock RenderOptions.ClearTypeHint="Enabled" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Padding="5" Foreground="Gray"
