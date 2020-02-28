@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
@@ -66,6 +67,8 @@ namespace Wox.ViewModel
             Results = new ResultsViewModel(_settings);
             History = new ResultsViewModel(_settings);
             _selectedResults = Results;
+
+            _selectedResults.PropertyChanged += HandleSelectedResultChange;
 
             InitializeKeyCommands();
             RegisterResultsUpdatedEvent();
@@ -209,6 +212,47 @@ namespace Wox.ViewModel
                 _queryText = value;
                 Query();
             }
+        }
+
+        private string _queryTextSuggestion;
+        public string QueryTextSuggestion
+        {
+            get
+            {
+                return QueryTextSuggestionFromResultOrEmpty();
+            }
+            set
+            {
+                _queryTextSuggestion = value;
+            }
+        }
+
+        private void HandleSelectedResultChange(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName != "SelectedItem")
+                return;
+
+            QueryTextSuggestion = QueryTextSuggestionFromResultOrEmpty();
+        }
+
+        private string QueryTextSuggestionFromResultOrEmpty()
+        {
+            if (string.IsNullOrEmpty(QueryText))
+                return "Type here to search";
+
+            if (SelectedResults.SelectedItem == null)
+                return string.Empty;
+
+            var selectedResultTitleLowercase = SelectedResults.SelectedItem.Result.Title.ToLower();
+            var queryTextLowercase = QueryText.ToLower();
+
+            if (!selectedResultTitleLowercase.StartsWith(queryTextLowercase))
+            {
+                return string.Empty;
+            }
+
+            // When user typed lower case and result title is uppercase, we still want to display suggestion
+            return QueryText + SelectedResults.SelectedItem.Result.Title.Substring(QueryText.Length);
         }
 
         /// <summary>
@@ -454,7 +498,6 @@ namespace Wox.ViewModel
                 }
             }
         }
-
 
         private Result ContextMenuTopMost(Result result)
         {
