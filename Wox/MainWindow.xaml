@@ -58,7 +58,6 @@
             <Grid>
                 <TextBox Style="{DynamicResource QueryBoxStyle}"
                          Text="{Binding QueryTextSuggestion, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         TextChanged="OnTextChanged"
                          x:Name="QueryTextSuggestionBox"
                          Foreground="LightGray"
                          IsEnabled="False">
