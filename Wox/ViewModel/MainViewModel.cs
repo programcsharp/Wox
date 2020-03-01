@@ -243,16 +243,15 @@ namespace Wox.ViewModel
             if (SelectedResults.SelectedItem == null)
                 return string.Empty;
 
-            var selectedResultTitleLowercase = SelectedResults.SelectedItem.Result.Title.ToLower();
-            var queryTextLowercase = QueryText.ToLower();
+            var selectedResult = SelectedResults.SelectedItem.Result;
+            var selectedResultActionKeyword = string.IsNullOrEmpty(selectedResult.ActionKeywordAssigned) ? "" : selectedResult.ActionKeywordAssigned + " ";
+            var selectedResultPossibleSuggestion = selectedResultActionKeyword + selectedResult.Title;
 
-            if (!selectedResultTitleLowercase.StartsWith(queryTextLowercase))
-            {
+            if (!selectedResultPossibleSuggestion.ToLower().StartsWith(QueryText.ToLower()))
                 return string.Empty;
-            }
 
             // When user typed lower case and result title is uppercase, we still want to display suggestion
-            return QueryText + SelectedResults.SelectedItem.Result.Title.Substring(QueryText.Length);
+            return QueryText + selectedResultPossibleSuggestion.Substring(QueryText.Length);
         }
 
         /// <summary>

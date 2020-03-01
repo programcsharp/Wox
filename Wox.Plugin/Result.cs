@@ -14,6 +14,8 @@ namespace Wox.Plugin
         public string Title { get; set; }
         public string SubTitle { get; set; }
 
+        public string ActionKeywordAssigned { get; set; }
+
         public string IcoPath
         {
             get { return _icoPath; }
