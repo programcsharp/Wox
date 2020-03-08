@@ -229,7 +229,7 @@ namespace Wox.ViewModel
 
         private void HandleSelectedResultChange(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName != "SelectedItem")
+            if (e.PropertyName != nameof(Results.SelectedItem))
                 return;
 
             QueryTextSuggestion = QueryTextSuggestionFromResultOrEmpty();
