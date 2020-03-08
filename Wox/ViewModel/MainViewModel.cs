@@ -247,7 +247,7 @@ namespace Wox.ViewModel
             var selectedResultActionKeyword = string.IsNullOrEmpty(selectedResult.ActionKeywordAssigned) ? "" : selectedResult.ActionKeywordAssigned + " ";
             var selectedResultPossibleSuggestion = selectedResultActionKeyword + selectedResult.Title;
 
-            if (!selectedResultPossibleSuggestion.ToLower().StartsWith(QueryText.ToLower()))
+            if (!selectedResultPossibleSuggestion.StartsWith(QueryText, StringComparison.CurrentCultureIgnoreCase))
                 return string.Empty;
 
             // When user typed lower case and result title is uppercase, we still want to display suggestion
