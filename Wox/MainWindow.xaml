@@ -55,23 +55,32 @@
     </Window.InputBindings>
     <Border Style="{DynamicResource WindowBorderStyle}" MouseDown="OnMouseDown" >
         <StackPanel Orientation="Vertical">
-            <TextBox Style="{DynamicResource QueryBoxStyle}"
+            <Grid>
+                <TextBox Style="{DynamicResource QueryBoxStyle}"
+                         Text="{Binding QueryTextSuggestion, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         x:Name="QueryTextSuggestionBox"
+                         Foreground="LightGray"
+                         IsEnabled="False">
+                </TextBox>
+                <TextBox Style="{DynamicResource QueryBoxStyle}"
                      Text="{Binding QueryText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      PreviewDragOver="OnPreviewDragOver"
                      TextChanged="OnTextChanged"
                      AllowDrop="True"
                      Visibility="Visible"
-                     x:Name="QueryTextBox">
-                <TextBox.ContextMenu>
-                    <ContextMenu>
-                        <MenuItem Command="ApplicationCommands.Cut"/>
-                        <MenuItem Command="ApplicationCommands.Copy"/>
-                        <MenuItem Command="ApplicationCommands.Paste"/>
-                        <Separator />
-                        <MenuItem Header="Settings" Click="OnContextMenusForSettingsClick" />
-                    </ContextMenu>
-                </TextBox.ContextMenu>
-            </TextBox>
+                     x:Name="QueryTextBox"
+                     Background="Transparent">
+                    <TextBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Command="ApplicationCommands.Cut"/>
+                            <MenuItem Command="ApplicationCommands.Copy"/>
+                            <MenuItem Command="ApplicationCommands.Paste"/>
+                            <Separator />
+                            <MenuItem Header="Settings" Click="OnContextMenusForSettingsClick" />
+                        </ContextMenu>
+                    </TextBox.ContextMenu>
+                </TextBox>
+            </Grid>
             <Line x:Name="ProgressBar" HorizontalAlignment="Right"
                   Style="{DynamicResource PendingLineStyle}" Visibility="{Binding ProgressBarVisibility, Mode=TwoWay}" 
                   Y1="0" Y2="0" X2="100" Height="2" Width="752" StrokeThickness="1">

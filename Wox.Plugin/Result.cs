@@ -14,6 +14,12 @@ namespace Wox.Plugin
         public string Title { get; set; }
         public string SubTitle { get; set; }
 
+        /// <summary>
+        /// This holds the action keyward that triggered the result. 
+        /// If result is triggered by global keyword: *, this should be empty.
+        /// </summary>
+        public string ActionKeywordAssigned { get; set; }
+
         public string IcoPath
         {
             get { return _icoPath; }
